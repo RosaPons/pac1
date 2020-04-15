@@ -5,10 +5,11 @@
     <meta charset="utf-8" />
     <title>WEB tecnológica, enciclopedia desenvolupament front-end </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conceptes front-end, defincio i referencies de module bundlers i preprocessadors de codi web " />
+    <meta name="description" content="Conceptes front-end, defincio i refenencies de module bundlers i preprocessadors de codi web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/nou.css" />
+
 </head>
 
 <body>
@@ -37,46 +38,85 @@
         <div class="container-header-2">
             <nav class="menu-principal">
                 <ul>
-                    <li><a href="index.html" class="active">Inici</a></li>
+                    <li><a href="index.html">Inici</a></li>
                     <li><a href="empaquetadors.html" >Module bundlers</a></li>
-                    <li><a href="preprocessadors.html">Preprocessadors</a></li>
+                    <li><a href="#" class="active">Preprocessadors</a></li>
                 </ul>
             </nav>
         </div>
+
     </header>
     
     <main>
-        <!-- PAGINA PORTADA ENCICLOPEDIA TECNOLOGICA -->
+        <!-- PREPROCESSADORS  -->
         <!--Primera secció: presentació -->
         <section id="ind-presentacio-banner">
             <h1>Enciclopedia tecnològica </h1>    
             <h2>Conceptes front-end</h2> 
          </section>
-    
-        <!--Segona secció: Titol + fotografies  -->
-        <section class="por-section-portada">
-            <h4> Presentació </h4>
-            <div class="por-contenidor">
-                <div class="por-contenidor-col1">
-                    <P> Benvinguts a la enciclopèdia de conceptes relacionats amb el desenvolupament
-                        front-end. Aquí trobareu les eines més recents pel desenvolupament de un web actual.
-                        Comprovareu com aquestes eines ens faciliten el desenvolupament, la gestió de 
-                        dependències, l’automatització de certes tasques i l’ús de llenguatges i
-                        utilitats més avançades. </P>
-                </div>
 
-                <div class="por-contenidor-col2">
-                    <div class="por-foto">
-                        <img class="opacitat" src="img/font-end-web.png"  alt="Foto Front-end">
-
-                    </div>   
-                </div>
+        <!--Segona secció: fil ariadna -->
+        <section>
+            <div class="fil-ariadna">
+                <ul>
+                    <li><a href="index.html" title="Inici"> Inici &gt; </a></li>
+                    <li> Preprocessadors</li>
+                </ul>
             </div>
-
-
-
         </section>
 
+        <!--Tercera secció:  fotografies i text   -->
+        <section class="cat-section">
+            <h2> Preprocessadors </h2>
+            <div class="cat-contenidor">
+                <div class="cat-foto">
+                    <figure>
+                        <a href="#"></a><img class="opacitat" src="img/parcel.png" alt="Foto ruta modernista">
+                        <figcaption class="figcaption-text" ><a href="#" title="Ruta modernista"></a></figcaption>
+                    </figure>
+                </div>   
+                <div class="cat-foto">
+                    <figure>
+                        <a href="#"></a><img class="opacitat" src="img/webpack.png" alt="Foto ruta modernista">
+                        <figcaption class="figcaption-text" ><a href="#" title="Ruta modernista"></a></figcaption>
+                    </figure>
+                </div>   
+
+                 				
+            </div>
+
+            <div class="cat-text">
+                <p> Els preprocessador són un conjunt d'eines que reben arxius escrits en diversos llenguatges 
+                    i els converteixen en codi comprensible pel navegador. A vegades també són anomenats
+                    compiladors o transpiladors. </p>
+
+                <p> Els navegadors només són capaços de processar i executar
+                    <b><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" title="HTML,"> 
+                        HTML, </a> </b> 
+                    <b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS i"> 
+                        CSS i </a> </b> 
+                    <b><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/" title="JavaScript."> 
+                        JavaScript. </a> </b> 
+                    Qualsevol altre llenguatge ha d’acabar convertit en un d’aquests. </p>
+
+                <p> Els preprocessasdors que generen CSS s’utilizen per afegir noves funcionalitats
+                    com l’ús de variables o imbricació. Aquí destaquem 
+                    <b><a href="https://postcss.org/" title="PostCSS."> 
+                        PostCSS. </a> </b> 
+                </p>
+
+                <p>Els preprocessadors que generen JavaScript són usats per transformar llenguatges
+                    completament diferents a JavaScript, i també per transformar versions modernes del
+                    llenguatge en versions aptes per a tots els navegadors. Babel, ens ho permet. </p>
+
+                <p>Existeixen altres preprocessadors tant per CSS i JS com per HTML;
+                    <b><a href="https://code.visualstudio.com/docs/languages/typescript" title="TypeScript per"> 
+                        TypeScript </a> </b> 
+                        per JavaScript; SASS/SCSS per CSS o Pug per HTML. </p>
+            </div>
+
+        </section>
+      
     </main>
 
     <footer>

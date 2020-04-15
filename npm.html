@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8" />
+    <title>WEB tecnológica, enciclopedia desenvolupament front-end </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conceptes front-end, defincio i referencies Npm web " />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nou.css" />
+</head>
+
+<body>
+    <a class="sr" href="#main">Saltar al contenido principal</a>
+    <header>
+        <!-- logo + menú idiomes-->
+        <div class="container-header-1">
+            <div class="logo">
+                <img src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end ">
+            </div>
+
+            <div>
+                <nav class="idioma">
+                    <ul>
+                        <li><a href="" class="active">CA</a></li>
+                        <li>|</li>
+                        <li><a href="#">ES</a></li>
+                        <li>|</li>
+                        <li><a href="#">EN</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Menú navegació principal -->
+        <div class="container-header-2">
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="empaquetadors.html" class="active">Module bundlers</a></li>
+                    <li><a href="preprocessadors.html">Preprocessadors</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- PAGINA DETALL NPM -->
+        <!--Primera secció: presentació -->
+        <section id="ind-presentacio-banner">
+            <h1>Enciclopedia tecnològica </h1>    
+            <h2>Conceptes front-end</h2> 
+        </section>
+
+         <!--Segona secció: fil ariadna -->
+         <section>
+            <div class="fil-ariadna">
+                <ul>
+                    <li><a href="index.html" title="Inici"> Inici &gt; </a></li>
+                    <li><a href="empaquetadors.html" title="Inici"> Module Bundlers &gt; </a></li>
+                    <li> NPM</li>
+                </ul>
+            </div>
+         </section>
+               
+        <!--Tercera secció: 3 columnes de text -->
+        <section class="det-section">
+            <h3> NPM</h3>
+            <div class="det-contenidor">
+                <div class="det-col">
+                    <h4> Que és </h4>
+                    <p> Npm és l'administrador de paquets que ve preinstalat amb la plataforma
+                        de servidor <b>Node.js</b>. </P>
+                    <p>
+                        S'utilitza per instal·lar programes de Node des d’el 
+                        registre Npm. És una eina que ajuda als desenvolupadors a instal·lar, 
+                        eliminar i administrar programes de Node de tercers, bàsicament les
+                        dependències utilitzades en un programa.  
+                    </p>
+                </div>
+
+                <div class="det-col">
+                    <h4> Cóm instal.lar NPM</h4>
+                    <p> Instal·lar Npm és simple, atès que s'instal·la automàticament 
+                        quan instal·la Node.js. No et preocupis, Node.js tampoc és tan difícil d'instal·lar.</p>
+                    <p> En un navegador web, visita
+                        <b><a href="https://nodejs.org/" title="Node.js">  nodejs.org,</a> </b>
+                        i fes clic en el botó d'instal·lació.</p>
+                    <div>
+                        <p> Per comprovar la versió instal·lada executa:</p>
+                        <p class="comando"><i> $ node –version</i> </p>
+                    </div>
+                </div>
+
+                <div class="det-col">
+                    <h4> Com instal·lar paquets/móduls </h4>
+                    <p> Executa  des de la línia de comandos en el directori on es desitja instal·lar el paquet: </p>
+                    <p class="comando"><i>  $ npm install nom_paquet</i> </p>
+                    <div class="lletra-petita">
+                        <p> <i> (*) El paràmetre -g  davant nom del mòdul, instal·la el mòdul de forma global,
+                            la qual cosa fa disponible en qualsevol des de qualsevol ubicació o projecte. </i></p>
+                    </div>
+                    <div class="">
+                        <p> Per desinstal·lar:  </p>
+                        <p class="comando"><i> $ npm uninstall nom_paquet</i> </p>                      
+                    </div>
+                </div>   
+                   
+                <div class="det-col">
+                    <h4> Com iniciar una projecte amb Npm </h4>
+                    <p> Executa  des de la línia de comandos en el directori on es desitja crear el projecte: </p>
+                    <p class="comando"><i>  $ npm init -y</i> </p>
+                    <div class="lletra-petita">
+                        <p> <i> (*) El paràmetre -g  davant nom del mòdul, instal·la el mòdul de forma global,
+                            la qual cosa fa disponible en qualsevol des de qualsevol ubicació o projecte. </i></p>
+                    </div>
+                    <div class="interlin-petit">
+                        <p> Per desinstal·lar:  </p>
+                        <p class="comando"><i> $ npm uninstall nom_paquet</i> </p>                      
+                    </div>
+                </div>   
+            </div>
+        </section>
+
+        <!--4rta secció: video -->
+        <section class ="det-section">
+           <div class="det-contenidor">
+                <iframe class = "det-video" width="560" height="315" src="https://www.youtube.com/embed/m3u4B7UouiY"
+                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                 allowfullscreen></iframe>
+            </div>
+        </section>
+    
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <!-- logo -->
+            <div class="logo-petit">
+                <img  src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end">
+            </div>
+
+            <!-- Adreça empresa -->
+            <ul class="adreca-empresa">
+                <li><span class="text-en-dotted">info@enciclopedia_font_end.org</span> </li>
+            </ul>
+
+            <!-- Xarxes socials -->
+            <ul class="xarxes-socials">
+                 <li>
+                    <a class="xarxes-socials-icon" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="xarxes-socials-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="xarxes-socials-icon" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="xarxes-socials-icon" href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+
+            <!-- Menú Qui som, privacitat, avis legal i cookies -->
+            <div class="container-footer-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#" >Qui som</a></li>
+                        <li><a href="#">Política de privacitat</a></li>
+                        <li><a href="#">Avís legal</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Crèdits -->
+            <ul class="credits">
+                <li>© Enciclopèdia desenvolupament front-end.
+                    <a href="https://pixabay.com" title="Fotografies Pixabay">Fotografies Pixabay,</a>
+                    <a href="https://unsplash.com" title="Unsplash ">Unsplash i</a>
+                    <a href="https://wikipedia.org" title="Wikipedia">Wikipedia</a>
+                </li>
+            </ul>
+            
+            <!-- Autor  -->
+            <ul class="autor">
+                <li>Actividat realizada per Rosa Pons per a l'asignatura eines
+                    <abbr title="HyperText Markup Language" lang="en">HTML</abbr> y
+                    <abbr title="Cascading Style Sheets" lang="en">CSS</abbr></li>
+                <li>Primer semestre del curs 2020-2021</li>
+            </ul>
+                
+        </div>
+    </footer>
+</body>
+
+</html>
