@@ -1,8 +1,4 @@
 
-/* ******************************************************************************************
- E s t i l s    a p l i c a t s    a   l e s    3   p à g i n e s 
-********************************************************************************************* */
-
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700');
 * {
@@ -24,7 +20,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 
 main {
     /* per fixar el footer */
@@ -148,7 +143,6 @@ header {
 
 
 /* 1er Contenidor del HEADER: conté 2 items (logo i menu-idiomes) disposats en vertical */
-
 .container-header-1 {
     width: 100%;                  /*  !!! molt important */
     display: flex;                /* contenidor flexible amb 2 items en vertical i centrat  */
@@ -308,7 +302,6 @@ nav.menu-principal ul li:last-child {
 Estils pel footer
 *****************************/
 footer {
-
     width: 100%;
     padding: 20px 40px;
     background: rgb(0, 156, 177);
@@ -359,7 +352,6 @@ footer p {
 .credits  li,  .credits a {
     color: #FFFBD4;
 }
-
 .autor{
     display:block;
     font-size: 0.7rem; 
@@ -369,60 +361,203 @@ footer p {
     font-weight: bold;
 }
 
-/****************************
-Estils pel main generics
-*****************************/
+/**********************************************
+Estils pel main de totes les pàgines
+***********************************************/
 section {
     overflow: auto;  /* habilitar barres desplazament */
 }
 
-/* ----------LINIES NOVES   -------------- */
+/* -- Main: 1era secció ind-presentacio-banner */
 
+/* Contenidor: imatge de fons */
+#ind-presentacio-banner {
+    width: 100%;   /*  !!! molt important */
+    height: auto;
+    background: url('../img/open_source2.png') no-repeat right center;  
+    background-size: cover;
+    padding-left: 3vw;
+}
 
-/* Contenidor amb: text i foro */
+/* capçaleres que apareixen en ind-presentacio-banner */
+#ind-presentacio-banner h1, 
+#ind-presentacio-banner h2,
+#ind-presentacio-banner h3,
+#ind-presentacio-banner h3 a {
+    color:  #fdf39b; 
+    font-weight: 800;
+}
 
-.portada-contenidor {
-    display:flex;
-    flex-direction: column; 
-    margin-bottom: 1em;
-     padding-top: 20px;
+#ind-presentacio-banner h3 a:hover{
+    color:  #ffe81b;
+}
+/* Mides de fonts de capçalera */
+#ind-presentacio-banner h1 {
+    font-size: 1.3rem;
+    line-height: 1.1em; 
+    margin-top: 0.5em;
+}
+#ind-presentacio-banner h2 {
+    font-size: 1rem;
+    line-height: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+#ind-presentacio-banner h3 {
+    font-size: 1rem;
+    line-height: 0.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+@media (min-width: 568px) {
+    #ind-presentacio-banner h1 {
+       font-size: 2rem;
+   }
+}
+@media (min-width: 768px) {
+    #ind-presentacio-banner h1 {
+       font-size: 2.7rem;
+       line-height: 1.1em;         
+       padding-left: 11vw;
+   }
+   #ind-presentacio-banner h2 {
+       font-size: 1.5rem;
+       line-height: 1.1em;
+       padding-left: 11vw;
+   }
+   #ind-presentacio-banner h3 {
+       font-size: 1.3rem;
+       line-height: 1.1em;
+       padding-left: 11vw;
+   }
+}
+
+/* -- Portada Main, 2ona i 3era secció  (Module Bundlers i Preprocessadors)  */
+
+/* Contenidor de secció */
+.ind-section-portada {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 1.25rem;
 }
 @media (min-width: 768px) { 
-    .portada-contenidor {
-        display:flex;
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: flex-start;
- 
-    }  
+    .ind-section-portada{
+        margin-left: 11vw;
+        margin-right: 11vw;
+        padding-top: 3rem;
+        border: 2px solid blue; 
+    }
 }
-
-/* contenidors items */
-.portada-contenidor-text{
-    width: 100%;
+/* Títol secció */
+.ind-section-portada h2{
+    color:  black;
     margin-bottom: 1.25rem;
-  
-  
+    font-size: 1.5rem;
 }
-.portada-contenidor-foto{
+@media (min-width: 768px) { 
+    .ind-section-portada h2{
+        font-size: 2rem;
+    }
+}
+/* Contenidor de les fotos */
+.ind-portada-foto{
     width: 100%;
-  
- 
+}
+/* Contenidor principal de les fotos per a dispositius a partir de 768px */
+@media (min-width: 768px) { 
+    .ind-portada-foto{
+       width: 100%;
+       display: flex;    
+       margin-bottom: 2.5rem;
+    }   
+}
+/* Contenidor de text */
+.ind-portada-text{
+    width: 100%;
+    text-align: justify;
 }
 
-@media (min-width: 768px) { 
-    .portada-contenidor-text{
-        width: 70%;
-        margin-right: 3.12rem;
-       
-    }
-    .portada-contenidor-foto{
-        width: 30%;
-        height: auto;
-        padding-left: 3vw;
-        border: 2px solid yellow;
-        
-    }
-        
-    
+/*********
+   Fotos
+**********/
+
+/* contenidor per a cada foto */
+.ind-foto  {
+    width: 100%;
+    padding: 0.31rem;
+    display: flex;
+    justify-content: center;
 }
+/* imatges escalables */
+.ind-foto img {
+    width: 100%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* text que apareix al peu de les fotos */
+.figcaption-text {
+    text-align: left;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+ }
+/* text que apareix al peu de les fotos  per a dispositius a partir de 768px: centrat */
+@media (min-width: 570px) { 
+    .figcaption-text {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 768px) { 
+    .figcaption-text {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 992px) { 
+    .figcaption-text {
+        font-size: 1.3rem;
+    }
+}
+
+/***************************
+ Estils pel fil d'ariadna
+****************************/
+.fil-ariadna ul {
+    display:none;   
+}
+@media (min-width: 768px) { 
+    .fil-ariadna {
+       display: list-item;
+       background-color: #fff280; 
+       width:100%; 
+       padding-left: 14vw;
+       padding-top: 0.31rem;
+       padding-bottom: 0.31rem;
+       font-size: 0.8rem;
+       font-style: italic;
+ 
+    }
+    .fil-ariadna ul {
+        display:contents;
+        padding-left: 0.5em;
+    }
+    .fil-ariadna ul li {
+        display: inline-block;
+    }   
+  }
+@media (min-width: 992px) { 
+    .fil-ariadna {
+       font-size: 1rem;
+    }
+}
+@media (min-width: 1200px) { 
+    .fil-ariadna {
+       font-size: 1.5rem;
+    }
+}
+
+/* -- fi  -- */
