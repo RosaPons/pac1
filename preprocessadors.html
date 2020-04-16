@@ -86,33 +86,39 @@
             </div>
 
             <div class="cat-text">
-                <p> Els preprocessador són un conjunt d'eines que reben arxius escrits en diversos llenguatges 
+                <p> Els preprocessadors són un conjunt d'eines que reben arxius escrits en diversos llenguatges 
                     i els converteixen en codi comprensible pel navegador. A vegades també són anomenats
                     compiladors o transpiladors. </p>
 
-                <p> Els navegadors només són capaços de processar i executar
-                    <b><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" title="HTML,"> 
-                        HTML, </a> </b> 
-                    <b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS i"> 
-                        CSS i </a> </b> 
-                    <b><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/" title="JavaScript."> 
-                        JavaScript. </a> </b> 
-                    Qualsevol altre llenguatge ha d’acabar convertit en un d’aquests. </p>
+                <button id="mod-boto-mes2">LLegir +</button>
+                <button id="mod-boto-menys2">Llegir -</button>
+    
+                <div id="mod-text-module-var2">
+                    <p> Els navegadors només són capaços de processar i executar
+                        <b><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" title="HTML,"> 
+                            HTML, </a> </b> 
+                        <b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS i"> 
+                            CSS i </a> </b> 
+                        <b><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/" title="JavaScript."> 
+                            JavaScript. </a> </b> 
+                        Qualsevol altre llenguatge ha d’acabar convertit en un d’aquests. </p>
+    
+                    <p> Els preprocessasdors que generen CSS s’utilizen per afegir noves funcionalitats
+                        com l’ús de variables o imbricació. Aquí destaquem 
+                        <b><a href="https://postcss.org/" title="PostCSS."> 
+                            PostCSS. </a> </b> 
+                    </p>
+    
+                    <p>Els preprocessadors que generen JavaScript són usats per transformar llenguatges
+                        completament diferents a JavaScript, i també per transformar versions modernes del
+                        llenguatge en versions aptes per a tots els navegadors. Babel, ens ho permet. </p>
+    
+                    <p>Existeixen altres preprocessadors tant per CSS i JS com per HTML;
+                        <b><a href="https://code.visualstudio.com/docs/languages/typescript" title="TypeScript per"> 
+                            TypeScript </a> </b> 
+                            per JavaScript; SASS/SCSS per CSS o Pug per HTML. </p>
+                </div>
 
-                <p> Els preprocessasdors que generen CSS s’utilizen per afegir noves funcionalitats
-                    com l’ús de variables o imbricació. Aquí destaquem 
-                    <b><a href="https://postcss.org/" title="PostCSS."> 
-                        PostCSS. </a> </b> 
-                </p>
-
-                <p>Els preprocessadors que generen JavaScript són usats per transformar llenguatges
-                    completament diferents a JavaScript, i també per transformar versions modernes del
-                    llenguatge en versions aptes per a tots els navegadors. Babel, ens ho permet. </p>
-
-                <p>Existeixen altres preprocessadors tant per CSS i JS com per HTML;
-                    <b><a href="https://code.visualstudio.com/docs/languages/typescript" title="TypeScript per"> 
-                        TypeScript </a> </b> 
-                        per JavaScript; SASS/SCSS per CSS o Pug per HTML. </p>
             </div>
 
         </section>
@@ -168,6 +174,23 @@
                 
         </div>
     </footer>
+    
+    <script>
+        function llegir_menys(){
+           document.getElementById('mod-text-module-var2').style.display = 'none';
+           document.getElementById('mod-boto-mes2').style.display = 'block';
+           document.getElementById('mod-boto-menys2').style.display = 'none';
+        }   
+        function llegir_mes(){
+           document.getElementById('mod-text-module-var2').style.display = 'block';
+           document.getElementById('mod-boto-mes2').style.display = 'none';
+           document.getElementById('mod-boto-menys2').style.display = 'block';
+        }
+
+        document.getElementById("mod-boto-mes2").addEventListener("click", llegir_mes, false);
+        document.getElementById("mod-boto-menys2").addEventListener("click", llegir_menys, false);
+
+    </script>
 </body>
 
 </html>
