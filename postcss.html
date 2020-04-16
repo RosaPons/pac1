@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>WEB tecnológica, enciclopedia desenvolupament front-end </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conceptes front-end, defincio i referencies Yarn web " />
+    <meta name="description" content="Conceptes front-end, defincio i referencies PostCSS web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
 
@@ -46,7 +46,7 @@
     </header>
     
     <main>
-        <!-- PAGINA DETALL YARN-->
+        <!-- PAGINA DETALL PostCss  -->
         <!--Primera secció: presentació -->
         <section id="ind-presentacio-banner">
             <h1>Enciclopedia tecnològica </h1>    
@@ -58,66 +58,90 @@
             <div class="fil-ariadna">
                 <ul>
                     <li><a href="index.html" title="Inici"> Inici &gt; </a></li>
-                    <li><a href="empaquetadors.html" title="Inici"> Module Bundlers &gt; </a></li>
-                    <li>Yarn</li>
+                    <li><a href="preprocessadors.html" title="Inici"> Preprocessadors &gt; </a></li>
+                    <li>PostCSS</li>
                 </ul>
             </div>
          </section>
                
-        <!--Tercera secció: 4 columnes de text -->
+        <!--Tercera secció: 3 columnes de text -->
         <section class="det-section">
-            <h3>YARN</h3>
+            <h3>POSTCSS</h3>
             <div class="det-contenidor">
                 <div class="det-col">
                     <h4> Que és </h4>
-                    <p> És un administrador de paquets i permet usar i compartir 
-                        codi amb desenvolupadors de tot el mon. </p>
-                    <p> El codi és compateix a través del paquets (també anomenats mòduls) </p>
-                    <p> El arxiu <b>Package.json</b> conté les descripcions i dependències del paquet. </p>
-                </div>
+                    <p>  PostCSS no és un generador de codi CSS.  </p>
 
-                <div class="det-col">
-                    <h4> Cóm instal.lar Yarn</h4>
-                    <p> Accedir al web de Yarn  i descarregar l’instal·lador
-                        <b><a href="https://classic.yarnpkg.com/en/docs/install#windows-stable"
-                             title="Web instal.lació Yarn" > Web instal.lació Yarn</a> </b>
+                    <p> El que fa és proporcionar un analitzador de codi CSS i un conjunt de
+                        complements que permeten analitzar, optimitzar i transformar el codi CSS. 
                     </p>
+                    
+                    <p>Actualment, hi ha més de 200 complements per a PostCSS. </p>
+
+                    <p>Cada complement s’instal·la per separat i permet crear-ne de propis.</p>
+                    <p> Per a més informació clica 
+                        <a  href="https://www.sitepoint.com/an-introduction-to-postcss/"
+                            title="Introducció a PostCSS" >  <b> aquí. </b> </a> 
+                   </p>
+                </div>
+ 
                    
-                    <p class="pse"> Per comprovar la versió instal·lada executa la següent ordre:</p>
-                    <p><i class="comando"> $yarn –version</i> </p>
-                   
+                <div class="det-col">
+                    <h4> Complement Autoprefixer  </h4>
+                    <p> Autoprefixer analitza arxius CSS i agrega prefixes
+                         de proveïdor a les regles CSS utilitzant la base de dades
+                         <a  href="https://caniuse.com/"
+                            title="CanIUse" >  <b> CanIUse. </b> </a> 
+                    </p>
+                    
+
+                    <p class="pse"> Exemples de la transformació.</p>
+                    <p class="pse"> Codi original:</p>
+                    <div class="comando lletra-petita">
+                        <p class="pse"> a {</p>
+                        <p class="pse"> "transition: transform 1s</p>
+                        <p> }</p>
+                    </div>
+
+                    <p class="pse"> Codi transformat per Autoprefixer:</p>
+                    <div class="comando lletra-petita">
+                        <p class="pse"> a {</p>
+                        <p class="pse"> -webkit-transition: -webkit-transform 1s;</p>
+                        <p class="pse"> transition: -ms-transform 1s; </p>
+                        <p class="pse"> transition: transform 1s {</p>
+                        <p> }</p>
+                    </div>
+
+                    <p> Per a més informació clica 
+                        <a  href="https://css-tricks.com/autoprefixer/"
+                            title="Utilitzant autoprefixer" >  <b> aquí. </b> </a> 
+                   </p>
+                </div>   
+
+                <div class="det-col">
+                   <h4> Cóm instal.lar i executar Autoprefixer </h4>
+                   <p class="pse"> Des de Npm executa la següent ordre:</p>
+                   <p class="comando"> $ npm install –save-dev autoprefixer <p>
+ 
+                   <p class="pse"> Crea l'arxiu <b>.postcssrc </b> a l’arrel del projecte i afegeix les següents línies </p>
+                   <div class="comando lletra-petita">
+                       <p class="pse"> a {</p>
+                       <p class="pse"> “plugins”: { “autoprefixer”: true }</p>
+                       <p> }</p>
+                   </div>
+                   <p class="pse"> Executa la següent ordre i Autoprefixer aplicarà la transformació. </p>
+                   <p class="comando"> $ npm run build</p>
                 </div>
 
-                <div class="det-col">
-                    <h4> Com instal·lar paquets/móduls </h4>
-                    <p class="pse"> Executa des de la línia de comandos la següent ordre: </p>
-                    <p class ="comando"> <i>$yarn add nom_paquet  </i></p>
-
-                    <p> Per a més informació clica 
-                        <a  href="https://classic.yarnpkg.com/en/docs/usage"
-                            title="Com utlizar Yarn" >  <b> aquí. </b> </a> 
-                   </p>
-                </div>   
-                   
-                <div class="det-col">
-                    <h4> Com iniciar un projecte amb Yarn </h4>
-                    <p> Executa des de la línia de comandos la següent ordre: </p>
-                    <p class ="comando"> <i>$yarn init  </i></p>
-                    <p> Per a més informació clica 
-                        <a  href="https://classic.yarnpkg.com/en/docs/usage"
-                            title="Com utlizar Yarn" >  <b> aquí. </b> </a> 
-                   </p>
-                  
-                </div>   
             </div>
         </section>
 
         <!--4rta secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
-                 <iframe class = "det-video" width="560" height="315" src="https://www.youtube.com/embed/YMy_yrbsU8w" 
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/deu8Y4rwsIM"
+                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                   allowfullscreen></iframe>
             </div>
         </section>
     
@@ -161,7 +185,6 @@
             <ul class="credits">
                 <li>© Enciclopèdia desenvolupament front-end. </li>
             </ul>
-            
             
             <!-- Autor  -->
             <ul class="autor">

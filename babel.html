@@ -5,10 +5,9 @@
     <meta charset="utf-8" />
     <title>WEB tecnológica, enciclopedia desenvolupament front-end </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conceptes front-end, defincio i referencies Yarn web " />
+    <meta name="description" content="Conceptes front-end, defincio i referencies Babel web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
-
 </head>
 
 <body>
@@ -46,7 +45,7 @@
     </header>
     
     <main>
-        <!-- PAGINA DETALL YARN-->
+        <!-- PAGINA DETALL BABEL -->
         <!--Primera secció: presentació -->
         <section id="ind-presentacio-banner">
             <h1>Enciclopedia tecnològica </h1>    
@@ -58,56 +57,59 @@
             <div class="fil-ariadna">
                 <ul>
                     <li><a href="index.html" title="Inici"> Inici &gt; </a></li>
-                    <li><a href="empaquetadors.html" title="Inici"> Module Bundlers &gt; </a></li>
-                    <li>Yarn</li>
+                    <li><a href="preprocessadors.html" title="Inici"> Preprocessadors &gt; </a></li>
+                    <li>Babel</li>
                 </ul>
             </div>
          </section>
                
-        <!--Tercera secció: 4 columnes de text -->
+        <!--Tercera secció: 2 columnes de text -->
         <section class="det-section">
-            <h3>YARN</h3>
+            <h3>BABEL</h3>
             <div class="det-contenidor">
                 <div class="det-col">
                     <h4> Que és </h4>
-                    <p> És un administrador de paquets i permet usar i compartir 
-                        codi amb desenvolupadors de tot el mon. </p>
-                    <p> El codi és compateix a través del paquets (també anomenats mòduls) </p>
-                    <p> El arxiu <b>Package.json</b> conté les descripcions i dependències del paquet. </p>
-                </div>
-
-                <div class="det-col">
-                    <h4> Cóm instal.lar Yarn</h4>
-                    <p> Accedir al web de Yarn  i descarregar l’instal·lador
-                        <b><a href="https://classic.yarnpkg.com/en/docs/install#windows-stable"
-                             title="Web instal.lació Yarn" > Web instal.lació Yarn</a> </b>
+                    <p>  És una eina que ens permet transformar (transpilar) el nostre codi JS
+                        d’última generació a JS que qualsevol navegador o versió de Node.js entengui.
                     </p>
-                   
-                    <p class="pse"> Per comprovar la versió instal·lada executa la següent ordre:</p>
-                    <p><i class="comando"> $yarn –version</i> </p>
-                   
+
+                    <p> Per part de les empreses dels navegadors, tarden molt mesos i fins i 
+                        tot anys en implementar les noves versions de ES (Ecma Script).
+                        Amb Babel podrem utilitzar el més nou de JS amb la tranquil·litat que 
+                        funcionarà en la majoria de navegadors sense problemes.
+                    </p>
+
+                    <p>Babel funciona amb plugins o presets (conjunt de plugins) per indicar quines
+                      són les coses que volem transformar.
+                    </p>
                 </div>
-
-                <div class="det-col">
-                    <h4> Com instal·lar paquets/móduls </h4>
-                    <p class="pse"> Executa des de la línia de comandos la següent ordre: </p>
-                    <p class ="comando"> <i>$yarn add nom_paquet  </i></p>
-
-                    <p> Per a més informació clica 
-                        <a  href="https://classic.yarnpkg.com/en/docs/usage"
-                            title="Com utlizar Yarn" >  <b> aquí. </b> </a> 
-                   </p>
-                </div>   
+ 
                    
                 <div class="det-col">
-                    <h4> Com iniciar un projecte amb Yarn </h4>
-                    <p> Executa des de la línia de comandos la següent ordre: </p>
-                    <p class ="comando"> <i>$yarn init  </i></p>
-                    <p> Per a més informació clica 
-                        <a  href="https://classic.yarnpkg.com/en/docs/usage"
-                            title="Com utlizar Yarn" >  <b> aquí. </b> </a> 
-                   </p>
-                  
+                    <h4> Com utilitzar Babel  </h4>
+                    <p class="pse"> Crearem el nostre projecte amb la següent ordre:</p>
+                    <p ><i class="comando"> $ npm init </i> </p>
+
+                    <p>Si editem fitxer Package.json, veurem que s’ha afegit la dependència a Babel.</p>
+
+                    <p>En el directori arrel del nostre projecte crearem un nou fitxer <b> .babelrs </b>  
+                       i hi desarem la configuració del presets o plugins de Babel.
+                    </p>
+
+                    <p class="pse"> Instal·lem Babel amb la següent ordre:</p>
+                    <p ><i class="comando">$npm install –save-dev babel-cl</i> </p>
+                     
+                    <p class="pse"> Executarem la següent ordre per afegir els presets per Babel:</p>
+                    <p ><i class="comando"> $npm install babel-preset-env  --save-dev </i> </p>
+
+                    <p class="pse"> Editarem el fitxer <b> .babelrs </b>  i afegirem la següent linia:</p>
+                    <p ><i class="comando"> { “presets”: [“es2015”] } </i> </p>
+
+                    <p>Amb això Babel transpilarà el nostre codi JS a JS ES5.</p>
+
+                    <p class="pse"> Finalment executarem  <i class="comando">$npm run build </i> 
+                        per tal de que Babel faci la transformació.
+                    </p>
                 </div>   
             </div>
         </section>
@@ -115,10 +117,10 @@
         <!--4rta secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
-                 <iframe class = "det-video" width="560" height="315" src="https://www.youtube.com/embed/YMy_yrbsU8w" 
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-            </div>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/sZ0z7B7QmjI" 
+                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                   allowfullscreen></iframe>
+             </div>
         </section>
     
     </main>
@@ -161,7 +163,6 @@
             <ul class="credits">
                 <li>© Enciclopèdia desenvolupament front-end. </li>
             </ul>
-            
             
             <!-- Autor  -->
             <ul class="autor">
