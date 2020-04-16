@@ -59,77 +59,89 @@
                 <ul>
                     <li><a href="index.html" title="Inici"> Inici &gt; </a></li>
                     <li><a href="empaquetadors.html" title="Inici"> Module Bundlers &gt; </a></li>
-                    <li> Parcel</li>
+                    <li>Parcel</li>
                 </ul>
             </div>
          </section>
                
-        <!--Tercera secció: 3 columnes de text -->
+        <!--Tercera secció: 4 columnes de text -->
         <section class="det-section">
-            <h3> NPM</h3>
+            <h3>PARCEL</h3>
             <div class="det-contenidor">
                 <div class="det-col">
                     <h4> Que és </h4>
-                    <p> Npm és l'administrador de paquets que ve preinstalat amb la plataforma
-                        de servidor <b>Node.js</b>. </P>
-                    <p>
-                        S'utilitza per instal·lar programes de Node des d’el 
-                        registre Npm. És una eina que ajuda als desenvolupadors a instal·lar, 
-                        eliminar i administrar programes de Node de tercers, bàsicament les
-                        dependències utilitzades en un programa.  
+                    <p> És un empaquetador de aplicacions web molt valorat per la comunitat de desenvolupadors.</p>
+                    <p> És molt ràpid i no necessita configuració. </p>
+
+
+                    <h4> Cóm instal.lar Parcel </h4>
+                    <p class="pse"> Utilitza 
+                        <b><a href="https://nodejs.org"
+                            title="Web instal.lació Npm"> Npm </a> </b>  o
+                        <b><a href="https://classic.yarnpkg.com/en/docs/install#windows-stable"
+                             title="Web instal.lació Yarn"> Yarn  </a> </b> 
+                        per instal.lar Parcel en el teu projecte
                     </p>
+                    <p class="pse"><i class="comando">$npm install parcel-bundler --save-dev </i>  </p>
+                    <p class="pse"> o </p>
+                    <p><i class="comando">$yarn add parcel-bundler --dev </i> </p>
                 </div>
-
-                <div class="det-col">
-                    <h4> Cóm instal.lar NPM</h4>
-                    <p> Instal·lar Npm és simple, atès que s'instal·la automàticament 
-                        quan instal·la Node.js. No et preocupis, Node.js tampoc és tan difícil d'instal·lar.</p>
-                    <p> En un navegador web, visita
-                        <b><a href="https://nodejs.org/" title="Node.js ">  nodejs.org,</a> </b>
-                        i fes clic en el botó d'instal·lació.</p>
-                    <div class="interlin-petit">
-                        <p> Per comprovar la versió instal·lada executa:</p>
-                        <p><i> $ node –version</i> </p>
-                    </div>
-                </div>
-
-                <div class="det-col">
-                    <h4> Com instal·lar paquets/móduls </h4>
-                    <p> Executa  des de la línia de comandos en el directori on es desitja instal·lar el paquet: </p>
-                    <p><b>  $ npm install nom_paquet</b> </p>
-                    <div class="lletra-petita">
-                        <p> <i> (*) El paràmetre -g  davant nom del mòdul, instal·la el mòdul de forma global,
-                            la qual cosa fa disponible en qualsevol des de qualsevol ubicació o projecte. </i></p>
-                    </div>
-                    <div class="interlin-petit">
-                        <p> Per desinstal·lar:  </p>
-                        <p><b> $ npm uninstall nom_paquet</b> </p>                      
-                    </div>
-                </div>   
+ 
                    
                 <div class="det-col">
-                    <h4> Com iniciar una projecte amb Npm </h4>
-                    <p> Executa  des de la línia de comandos en el directori on es desitja crear el projecte: </p>
-                    <p><b>  $ npm init -y</b> </p>
-                    <div class="lletra-petita">
-                        <p> <i> (*) El paràmetre -g  davant nom del mòdul, instal·la el mòdul de forma global,
-                            la qual cosa fa disponible en qualsevol des de qualsevol ubicació o projecte. </i></p>
-                    </div>
-                    <div class="interlin-petit">
-                        <p> Per desinstal·lar:  </p>
-                        <p><b> $ npm uninstall nom_paquet</b> </p>                      
-                    </div>
+                    <h4> Com iniciar un projecte  </h4>
+                    <p class="pse"> Executa des de la línia de comandos: </p>
+                    <p class="pse" ><i class="comando">  $npm init -y</i> </p>
+                    <p class="pse"> o </p>
+                    <p ><i class="comando">  $yarn init -y</i> </p>
+
+                    <p> Parcel te un servidor de desenvolupament encastat que s'encarrega de 
+                        refer la nostra aplicació en calent a mesura que fem canvis. 
+                    </p>
+                    <p> Comando per activar el servidor: <i class="comando">$parcel index.html</i></p>
+                    <p> </p>
+                    <p> Des d'el navegador executa <i class="comando"> http://localhost:1234/ </i>
+                        per visualitzar les pàgines que estàs desenvolupant.</p>
                 </div>   
+
+                <div class="det-col">
+                    <h4>En modus desenvolupament / producció </h4>
+                    <p class="pse" > En el fitxer <b> package-json </b>, afegeix aquests scripts:  </p>
+                    <div class="comando lletra-petita">
+                        <p class="pse"> {</p>
+                        <p class="pse"> "scripts": {</p>
+                        <p class="pse"> "dev": "parcel <your entry file>" {</p>
+                        <p class="pse"> "build": "parcel build <your entry file>" {</p>
+                        <p class="pse">  &nbsp  &nbsp &nbsp }</p>  
+                        <p> }</p>
+                    </div>
+
+                    <p class="pse" >Para executar-lo en modus desenvolupament: </p>
+                    <p class="pse"> <i class="comando">  $yarn dev</p> </i>
+                    <p class="pse"> o </p>  
+                    <p> <i class="comando"> $npm run dev</p> </i>
+                    
+                    <p class="pse">Para executar-lo en modus producció: </p>
+                    <p class="pse"> <i class="comando">  $yarn dev</p> </i>
+                    <p class="pse"> o </p>  
+                    <p> <i class="comando"> $npm run dev</p> </i>
+
+                    <p> 
+                        Per a més informació clica 
+                        <a  href="https://parceljs.org/" title="Com utlizar Parcel">  <b> aquí. </b> </a> 
+                   </p>
+                   
+                </div> 
             </div>
         </section>
 
         <!--4rta secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
-                <iframe class = "det-video" width="560" height="315" src="https://www.youtube.com/embed/m3u4B7UouiY"
-                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                 allowfullscreen></iframe>
-            </div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Dv9EVK6BenI"
+                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                   allowfullscreen></iframe>
+             </div>
         </section>
     
     </main>
@@ -171,9 +183,6 @@
             <!-- Crèdits -->
             <ul class="credits">
                 <li>© Enciclopèdia desenvolupament front-end.
-                    <a href="https://pixabay.com" title="Fotografies Pixabay">Fotografies Pixabay,</a>
-                    <a href="https://unsplash.com" title="Unsplash ">Unsplash i</a>
-                    <a href="https://wikipedia.org" title="Wikipedia">Wikipedia</a>
                 </li>
             </ul>
             
@@ -182,7 +191,7 @@
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines
                     <abbr title="HyperText Markup Language" lang="en">HTML</abbr> y
                     <abbr title="Cascading Style Sheets" lang="en">CSS</abbr></li>
-                <li>Primer semestre del curs 2020-2021</li>
+                <li>Primer semestre del curs 2020</li>
             </ul>
                 
         </div>

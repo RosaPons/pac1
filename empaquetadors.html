@@ -9,10 +9,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/nou.css" />
-
+    
 </head>
 
 <body>
+    <script>
+        function llegir_menys(){
+           document.getElementById('mod-text-module-var').style.display = 'none';
+           document.getElementById('mod-boto-mes').style.display = 'block';
+           document.getElementById('mod-boto-menys').style.display = 'none';
+        }   
+        function llegir_mes(){
+           document.getElementById('mod-text-module-var').style.display = 'block';
+           document.getElementById('mod-boto-mes').style.display = 'none';
+           document.getElementById('mod-boto-menys').style.display = 'block';
+        }
+    </script>
+
     <a class="sr" href="#main">Saltar al contenido principal</a>
     <header>
         <!-- logo + menú idiomes-->
@@ -67,45 +80,42 @@
         </section>
        <!--Tercera secció: Titol + fotografies + text -->
         <section class="cat-section">
-            <h2> Module bundlers</h2>
+            <h3> Module bundlers</h3>
             <div class="cat-contenidor">
                 <div class="cat-foto">
                     <figure>
-                        <a href="npm.html"><img class="opacitat" src="img/npm.png" alt="Logo software Npm"> </a>
+                        <a href="npm.html"><img class="opacitat" src="img/npm.png" alt="Logo software Npm"></a>
                         <figcaption class="figcaption-text"><a href="" title="npm"></a></figcaption>
                     </figure>
                 </div>
 
                 <div class="cat-foto">
                     <figure>
-                        <a href="yarn.html"></a><img class="opacitat" src="img/yarn.png" alt="Logo software Yarn">
-                        <figcaption class="figcaption-text"><a href="#" title=" Yarn"></a></figcaption>
+                        <a href="yarn.html"><img class="opacitat" src="img/yarn.png" alt="Logo software Npm"> </a>
+                        <figcaption class="figcaption-text"><a href="" title="npm"></a></figcaption>
+                    </figure>
+                </div>
+                <div class="cat-foto">
+                    <figure>
+                        <a href="parcel.html"><img class="opacitat" src="img/parcel.png" alt="Logo software Npm"> </a>
+                        <figcaption class="figcaption-text"><a href="" title="npm"></a></figcaption>
                     </figure>
                 </div>
 
                 <div class="cat-foto">
                     <figure>
-                        <a href="parcel.html"></a><img class="opacitat" src="img/parcel.png" alt="Lofo software Parcel">
-                        <figcaption class="figcaption-text" ><a href="#" title="Parcel"></a></figcaption>
+                        <a href="webpack.html"><img class="opacitat" src="img/webpack.png" alt="Logo software Npm"> </a>
+                        <figcaption class="figcaption-text"><a href="" title="npm"></a></figcaption>
                     </figure>
-                </div>   
-                <div class="cat-foto">
-                    <figure>
-                        <a href="#"></a><img class="opacitat" src="img/webpack.png" alt="Logo software Webpack">
-                        <figcaption class="figcaption-text" ><a href="#" title="Webpack"></a></figcaption>
-                    </figure>
-                </div>    				
+                </div>
+ 				
             </div>
 
             <div class="cat-text">
-                <p> Els administradors de paquets són programes utilitzats per instal·lar,
-                    desinstal.lar y administrar paquets de software. Serveixen i gestionar
-                    versions de paquets i llibreries. </p>
+                <p> Els administradors de paquets són programes per instal·lar,
+                    desinstal.lar i administrar paquets i llibreries de software propies com de tercers. </p>
 
-                <p> Els desenvolupadors de tot el mon els usen per compartir paquets i també
-                    per administrar-ne de propis.  </p>   
-
-                <p> Els mes coneguts són 
+                <p> Els més coneguts són:
                     <b><a href="https://docs.npmjs.com/" title="Node.js Package Manager (NPM),"> 
                          Node.js Package Manager (NPM),</a> </b>
                     <b><a href="https://classic.yarnpkg.com/en/" title="Yarn Package Manager (YARN),"> 
@@ -115,23 +125,28 @@
                     <b><a href="https://webpack.js.org/" title="i Webpack."> 
                         i Webpack.</a> </b>
                 </p>
+            
+                <button id="mod-boto-mes" onclick="llegir_mes()">Llegir + </button>
+                <button id="mod-boto-menys" onclick="llegir_menys()">Llegir - </button>
 
-                <p> Un Module Bundlers ens permet automatitzar tot un seguit de tasques això 
-                    com gestionar els assets de les dependències que hem automatitzat amb NPM.
-                    Les tasques que automatitza un module bundler poden variar en funció de la
-                    nostra aplicació destí. Actualment, els modules bundlers realitzen aquestes
-                    tasques de forma transparent a l’usuari, tot i permeten la configuració per
-                    casos especials. </p> 
-
-                <p> En un entorn de producció, un module bundler realitzarà tasques que compilin, 
-                    concatenin i minifiquin fulls d’estils i scripts, processos d’optimització 
-                    sobre les imatges i demés assets. </p>
-
-                <p> En l’entorn de desenvolupament, l’objectiu del module bundler és oferir una bona 
-                   experiència al desenvolupador. Una de les principals funcionalitats en aquest entorn
-                   és llançar un servidor de desenvolupament i monitoritzar els canvis als fitxers per
-                   refrescar el navegador automàticament. En aquest entorn, el bundler no optimitza els
-                   nostres assents per oferir-nos un major velocitat de desenvolupament.   </p>
+                <div id="mod-text-module-var">
+                    <p> Un Module Bundlers ens permet automatitzar tot un seguit de tasques així 
+                        com gestionar les dependències dels nostres assets.
+                        Les tasques que automatitza un module bundler poden variar en funció de la
+                        nostra aplicació destí. Actualment, els modules bundlers realitzen aquestes
+                        tasques de forma transparent a l’usuari, tot i que permeten la configuració per
+                        casos especials. </p> 
+    
+                    <p> En un entorn de producció, un module bundler realitzarà tasques que compilin, 
+                        concatenin i minifiquin fulls d’estils i scripts, processos d’optimització 
+                        sobre les imatges i demés assets. </p>
+    
+                    <p> En l’entorn de desenvolupament, l’objectiu del module bundler és oferir una bona 
+                       experiència al desenvolupador. Una de les principals funcionalitats és llançar
+                       un servidor de desenvolupament i que els canvis es refresquin automàticament en el 
+                       navegador.  En aquest entorn, el bundler no optimitza els nostres assents, 
+                       l'objectiu és oferir una major velocitat de desenvolupament.   </p>
+                </div>
             </div>
         </section>
     </main>
@@ -189,6 +204,7 @@
                 
         </div>
     </footer>
+   
 </body>
 
 </html>
