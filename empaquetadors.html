@@ -115,8 +115,8 @@
                         i Webpack.</a> </b>
                 </p>
             
-                <button id="mod-boto-mes" onclick="llegir_mes()">Llegir + </button>
-                <button id="mod-boto-menys" onclick="llegir_menys()">Llegir - </button>
+                <button id="mod-boto-mes">LLegir +</button>
+                <button id="mod-boto-menys">Llegir -</button>
 
                 <div id="mod-text-module-var">
                     <p> Un Module Bundlers ens permet automatitzar tot un seguit de tasques així 
@@ -201,6 +201,9 @@
            document.getElementById('mod-boto-mes').style.display = 'none';
            document.getElementById('mod-boto-menys').style.display = 'block';
         }
+        document.getElementById("mod-boto-mes").addEventListener("click", llegir_mes, false);
+        document.getElementById("mod-boto-menys").addEventListener("click", llei, false);
+
     </script>
 </body>
 
