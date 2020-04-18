@@ -8,7 +8,7 @@
     <meta name="description" content="Conceptes front-end, defincio i referencies Npm web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/nou.css" />
+
 </head>
 
 <body>
@@ -71,49 +71,63 @@
                 <div class="det-col">
                     <h4> Que és </h4>
                     <p> Npm és l'administrador de paquets que ve preinstalat amb la plataforma
-                        de servidor <b>Node.js</b>. </P>
-                    <p>
-                        S'utilitza per instal·lar programes de Node des d’el 
-                        registre Npm. És una eina que ajuda als desenvolupadors a instal·lar, 
-                        eliminar i administrar programes de Node de tercers, bàsicament les
-                        dependències utilitzades en un programa.  
+                        de servidor <b>Node.js</b>. </p>
+
+                    <p> S'utilitza per instal·lar programes de Node des d’el 
+                        registre Npm. </p> 
+
+                    <p> És una eina que ajuda als desenvolupadors a instal·lar, 
+                        eliminar i administrar mòduls Node de tercers i les
+                        seves dependències.  
                     </p>
+
                 </div>
 
                 <div class="det-col">
-                    <h4> Cóm instal.lar NPM</h4>
+                    <h4>Cóm instal.lar NPM</h4>
                     <p> Instal·lar Npm és simple, atès que s'instal·la automàticament 
-                        quan instal·la Node.js. No et preocupis, Node.js tampoc és tan difícil d'instal·lar.</p>
+                        quan instal·la Node.js.</p>
                     <p> En un navegador web, visita
                         <b><a href="https://nodejs.org/" title="Node.js">  nodejs.org,</a> </b>
                         i fes clic en el botó d'instal·lació.</p>
                     
-                    <p class="pse"> Per comprovar la versió instal·lada executa:</p>
-                    <p class="comando"><i> $ node –version</i> </p>
+                    <p class="pse"> Per a comprovar la versió instal·lada executa la següent ordre:</p>
+                    <p class="comando"><i>$ node –version</i> </p>
                     
                 </div>
 
                 <div class="det-col">
-                    <h4> Com instal·lar paquets/móduls </h4>
-                    <p class="pse"> Executa  des de la línia de comandos en el directori on es desitja instal·lar el paquet: </p>
+                    <h4> Com iniciar un projecte Npm </h4>
+                    <p class="pse">Executa la següent ordre des d'el directori on es desitja crear el projecte: </p>
+                    <p class="comando"><i>  $ npm init -y</i> </p>
+                    <p> Ens crearà de forma automàtica el fitxer <b> package.json </b> que conté informació 
+                    del nostre projecte i les seves dependencies. </p>
+                    <p> Les dependències que anem instal.lant s'afegiran en la captera node_modules. </p>
+
+                </div>   
+
+                <div class="det-col">
+                    <h4> Com instal·lar hi paquets </h4>
+                    <p class="pse"> Executa la seguënt ordre des de la línia de comandos
+                        i des d'el directori on es desitja instal·lar el paquet: </p>
                     <p class="comando"><i>  $ npm install nom_paquet</i> </p>
 
                     <div class="lletra-petita">
                         <p> <i> (*) El paràmetre -g  davant nom del mòdul, instal·la el mòdul de forma global,
-                            la qual cosa fa disponible en qualsevol des de qualsevol ubicació o projecte. </i></p>
+                            i el fa disponible per qualsevol ubicació o projecte. </i></p>
                     </div>
                    
                     <p class="pse"> Per desinstal·lar:  </p>
-                    <p class="comando"><i> $ npm uninstall nom_paquet</i> </p>                      
+                    <p class="comando"><i> $ npm uninstall nom_paquet</i> </p>    
+                    
+                    <p> Per a més informació clica 
+                        <a  href="https://docs.npmjs.com/cli/install"
+                            title="Com utlizar NPM" >  <b> aquí. </b> </a> 
+                   </p>
                 </div>   
-                   
-                <div class="det-col">
-                    <h4> Com iniciar un projecte amb Npm </h4>
-                    <p class="pse">Executa  des de la línia de comandos en el directori on es desitja crear el projecte: </p>
-                    <p class="comando"><i>  $ npm init -y</i> </p>
-                    <p> !!! Falta explicar que fa el comando init</p>
-                </div>   
+            
             </div>
+            
         </section>
 
         <!--4rta secció: video -->
@@ -169,9 +183,9 @@
             <!-- Autor  -->
             <ul class="autor">
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines
-                    <abbr title="HyperText Markup Language" lang="en">HTML</abbr> y
+                    <abbr title="HyperText Markup Language" lang="en">HTML</abbr> i
                     <abbr title="Cascading Style Sheets" lang="en">CSS</abbr></li>
-                <li>Primer semestre del curs 2020-2021</li>
+                <li>Primer semestre del curs 2020</li>
             </ul>
                 
         </div>

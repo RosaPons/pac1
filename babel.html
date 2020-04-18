@@ -37,8 +37,8 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html">Inici</a></li>
-                    <li><a href="empaquetadors.html" class="active">Module bundlers</a></li>
-                    <li><a href="preprocessadors.html">Preprocessadors</a></li>
+                    <li><a href="empaquetadors.html" >Module bundlers</a></li>
+                    <li><a href="preprocessadors.html" class="active">Preprocessadors</a></li>
                 </ul>
             </nav>
         </div>
@@ -84,32 +84,34 @@
                     </p>
                 </div>
  
-                   
                 <div class="det-col">
                     <h4> Com utilitzar Babel  </h4>
                     <p class="pse"> Crearem el nostre projecte amb la següent ordre:</p>
                     <p ><i class="comando"> $ npm init </i> </p>
 
-                    <p>Si editem fitxer Package.json, veurem que s’ha afegit la dependència a Babel.</p>
-
-                    <p>En el directori arrel del nostre projecte crearem un nou fitxer <b> .babelrs </b>  
-                       i hi desarem la configuració del presets o plugins de Babel.
-                    </p>
-
-                    <p class="pse"> Instal·lem Babel amb la següent ordre:</p>
+                     <p class="pse"> Instal·lem Babel amb la següent ordre:</p>
                     <p ><i class="comando">$npm install –save-dev babel-cl</i> </p>
                      
-                    <p class="pse"> Executarem la següent ordre per afegir els presets per Babel:</p>
+                    <p class="pse"> Executarem la següent ordre per afegir un dels presets per Babel:</p>
                     <p ><i class="comando"> $npm install babel-preset-env  --save-dev </i> </p>
+
+                    <p>En el directori arrel del nostre projecte crearem un nou fitxer <b> .babelrs </b>  
+                        i és on hi desarem la configuració de Babel.
+                     </p>
 
                     <p class="pse"> Editarem el fitxer <b> .babelrs </b>  i afegirem la següent linia:</p>
                     <p ><i class="comando"> { “presets”: [“es2015”] } </i> </p>
 
                     <p>Amb això Babel transpilarà el nostre codi JS a JS ES5.</p>
 
-                    <p class="pse"> Finalment executarem  <i class="comando">$npm run build </i> 
+                    <p> Finalment executarem  <i class="comando">$npm run build </i> 
                         per tal de que Babel faci la transformació.
                     </p>
+
+                    <p> Per a més informació clica 
+                        <a  href="https://babeljs.io/docs/en/"
+                            title="Com utlizar Babel" >  <b> aquí. </b> </a> 
+                   </p>
                 </div>   
             </div>
         </section>
@@ -117,7 +119,7 @@
         <!--4rta secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/sZ0z7B7QmjI" 
+                   <iframe class = "det-video"  width="560" height="315" src="https://www.youtube.com/embed/sZ0z7B7QmjI" 
                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                    allowfullscreen></iframe>
              </div>
@@ -167,7 +169,7 @@
             <!-- Autor  -->
             <ul class="autor">
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines
-                    <abbr title="HyperText Markup Language" lang="en">HTML</abbr> y
+                    <abbr title="HyperText Markup Language" lang="en">HTML</abbr> i
                     <abbr title="Cascading Style Sheets" lang="en">CSS</abbr></li>
                 <li>Primer semestre del curs 2020</li>
             </ul>
