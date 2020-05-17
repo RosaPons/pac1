@@ -25,7 +25,6 @@ main {
     /* per fixar el footer */
     flex: 1;
     overflow: auto; 
-    /*background-color: #FFFBD4; */
     background-color:  rgb(181, 243, 252);
 }
 
@@ -39,16 +38,20 @@ p {
     margin-bottom: 1rem;
 }
 
+.pi{
+    font-style: italic; /* nou pac2: text en italic; per passar validador accesibilitat */
+}
+.pb {
+    font-weight: bold;   /* nou pac2: text en negret; per passar validador accesibilitat */
+}
 a {
     color: #000;
     text-decoration: none;
-   
 }
 
 a:hover {
    color: #000; 
    font-weight: bold;
- 
 }
 
 /* peu del video */
@@ -169,7 +172,7 @@ header {
         justify-content: space-between;
         align-items: flex-start;
     }
-    .logo{
+    .logo, .logo-petit{ 
         width: 10vw;
     }
 }
@@ -195,8 +198,6 @@ header {
     }
 }
    
-
-
 @media (min-width: 768px) {
     .container-header-1 {
         max-width: 720px;
@@ -205,7 +206,7 @@ header {
         justify-content: space-between;
         align-items: flex-start;
     }
-    .logo{
+    .logo, .logo-petit {
         width: 8vw;
     }
 }
@@ -217,7 +218,7 @@ header {
         justify-content: space-between;
         align-items: flex-start;
     }
-    .logo{
+    .logo , .logo-petit {
         width: 7vw;
     }
 }
@@ -241,6 +242,10 @@ header {
     height: auto;
 }
 
+.logo-petit{
+    margin: 0 auto;
+    width: 15vw;
+}
 /* 2on  Contenidor del HEADER: menú principal  */
 .container-header-2 {
     text-align: center;
@@ -252,11 +257,6 @@ header {
     padding-bottom: 0.1rem;
 } 
  
-.logo-petit{
-      width: 5vw;
-      margin: 0 auto;
-  }
-
 /****************************
 Estils generics pels menus 
 *****************************/
@@ -361,6 +361,11 @@ footer p {
     background-color:  rgb(13, 109, 165);
     padding:10px;
 }
+
+.xarxes-socials-oval {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
 .container-footer-menu{
     display:block;
     margin-top: 20px;
@@ -593,7 +598,8 @@ Estils per pàgina de portada index.html
         padding-top: 3rem;
     }
 }
-.por-section-portada h4 {
+.por-section-portada h1, 
+.por-section-portada h2 {
     color: rgb(13, 109, 165);
     padding-left: 1rem;
 }
@@ -607,7 +613,7 @@ Estils per pàgina de portada index.html
        width: 100%;
        display: flex;    
        flex-direction: column;  /* nova linia  */
-       align-items: center;  /* nova linia  */
+       align-items: center;     /* nova linia  */
        margin-bottom: 2.5rem;
     }   
 }
@@ -619,38 +625,19 @@ Estils per pàgina de portada index.html
 }
 @media (min-width: 768px) { 
     .por-contenidor-col1 {
-        width: 75%;     /* valor anterior: 50% */
+        width: 75%;     
         padding: 1rem;
         text-align: justify;
     }   
 }
 
- /*  inici a eliminar   */
-.por-contenidor-col2  {  /*  a eliminar   */
-    width: 100%;
-   }
-@media (min-width: 768px) { 
-    .por-contenidor-col2{
-        width: 50%;
-    }
-}
- /*  fi eliminar   */
-
- /* --- TRACTAMENT FOTOS --- */
+/* --- TRACTAMENT FOTOS --- */
 
 .por-foto img {
     width: 100%;
-    /* padding: 0rem; */
     height: auto;
     border-radius: 35px;
        
-}
-@media (min-width: 768px) { 
-    .por-foto img{
-       /* width: 100%;   */   /* eliminada: no seveix   */
-       /* height: auto;  */   /* eliminada: no serveix  */
-    
-    }
 }
 
 /*****************************************************************************
@@ -670,17 +657,21 @@ Estils per pàgines de categories: empaquetadors.html i preprocessadors.html
         padding-top: 3rem;
     }
 }
+
+.cat-section h2 {
+    color: rgb(13, 109, 165);
+    padding-left: 1rem;
+}
+
 /* Contenidor dintre section */
 .cat-contenidor{
     width: 100%;
-    /* border: 2px solid red; */
 }
 @media (min-width: 768px) { 
     .cat-contenidor{
        width: 100%;
        display: flex;    
        margin-bottom: 1.5rem;
-     /* border: 2px solid red; */
     }   
 }
 
@@ -688,31 +679,24 @@ Estils per pàgines de categories: empaquetadors.html i preprocessadors.html
     width: 100%; 
     padding: 0.31rem;
     margin: 0.5em;
-    /* display: flex; */
     justify-content: center;
-   /* border: 2px solid red; */
 }
 
 /* imatges escalables */
 .cat-foto img {
     width: 80%;
     border-radius: 25px;
-   /* margin: auto; */
     display: block;   /* per centrar */
 
 }
 @media (min-width: 480px) { 
     .cat-foto img {
        width: 100%;
-      /* display: flex;    */ 
-
     }   
 }
 @media (min-width: 1024px) { 
     .cat-foto img {
        width: 50%;
-      /* display: flex;    */ 
-
     }   
 }
 
@@ -730,14 +714,12 @@ Estils per pàgina detall
     padding-left: 3vw;
     padding-right: 3vw;
     padding-top: 1.25rem;
-    /* border: 2px solid red;   /*  ES DE PROVES */
 }
 @media (min-width: 768px) { 
     .det-section{
         margin-left: 11vw;
         margin-right: 11vw;
         padding-top: 3rem;
-        /* border: 2px solid red;   /* ES DE PROVES */
     }
 }
 /* nou pac2: linia separació entre seccions  */
@@ -783,12 +765,14 @@ Estils per pàgina detall
     /*    text-align: justify; */
     }   
 }
-.det-section h3{
+.det-section h2,
+.det-section h3,
+.det-section h4{
     color: rgb(13, 109, 165);
 }
   
-.det-section h4{
-  color: rgb(13, 109, 165);
+.oculta{
+    display:none;      
 }
 
 .det-col h4{
@@ -874,6 +858,7 @@ Estils per pàgina detall
 .comando{
     background-color: ivory;
     border-radius: 10px;
+    font-style: italic; /* nou pac2: text en italic; per passar validador accesibilitat */
 }
 
 /* botons per mostrar o amagar text */
