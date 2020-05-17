@@ -8,6 +8,7 @@
     <meta name="description" content="Conceptes front-end, defincio i referencies de module bundlers i preprocessadors de codi web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
+    <link rel="icon"   href="img/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <header>
         <!-- logo + menú idiomes-->
         <div class="container-header-1">
-            <div class="logo">
+            <div class="logo animation-rotate">
                 <img src="img/logo_tecno.png" alt=" Logo del lloc: Enciclopedia conceptes front-end  ...">
             </div>
 
@@ -37,7 +38,8 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html" class="active">Inici</a></li>
-                    <li><a href="empaquetadors.html" >Module bundlers</a></li>
+                    <li><a href="empaquetadors.html" >Empaquetadors</a></li>
+                    <li><a href="module.html" >Module bundlers</a></li>
                     <li><a href="preprocessadors.html">Preprocessadors</a></li>
                 </ul>
             </nav>
@@ -55,7 +57,21 @@
         <!--Segona secció: Titol + fotografies  -->
         <section class="por-section-portada">
             <h4> Presentació </h4>
+       
             <div class="por-contenidor">
+                <div class="por-contenidor-col1">
+                    <div class="por-foto">
+                        <img    src="img/portada_medium.jpg"
+                        srcset= " 
+                            img/portada_480.jpg 480w,
+                            img/portada_medium.jpg 640w,
+                            img/portada_1440.jpg 1440w"
+                            sizes= "100vw"
+                         alt = "Foto presentació web enciclopedia tecnològica" > 
+                          
+                    </div>   
+                </div>
+
                 <div class="por-contenidor-col1">
                     <P> Benvinguts a la enciclopèdia de conceptes relacionats amb el desenvolupament
                         front-end. Aquí trobareu les eines més recents pel desenvolupament de un web actual.
@@ -64,12 +80,6 @@
                         utilitats més avançades. </P>
                 </div>
 
-                <div class="por-contenidor-col2">
-                    <div class="por-foto">
-                        <img src="img/font-end-web.png"  alt="Foto Front-end">
-
-                    </div>   
-                </div>
             </div>
 
         </section>
@@ -78,6 +88,10 @@
 
     <footer>
         <div class="container-footer">
+            <!-- titol  -->
+            <ul class="credits">
+                <li>© Enciclopèdia desenvolupament front-end.</li>
+            </ul>
             <!-- logo -->
             <div class="logo-petit">
                 <img  src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end">
@@ -102,7 +116,7 @@
             <div class="container-footer-menu">
                 <nav>
                     <ul>
-                        <li><a href="#" >Qui som</a></li>
+                        <li><a href="#">Qui som</a></li>
                         <li><a href="#">Política de privacitat</a></li>
                         <li><a href="#">Avís legal</a></li>
                         <li><a href="#">Cookies</a></li>
@@ -110,11 +124,7 @@
                 </nav>
             </div>
 
-            <!-- Crèdits -->
-            <ul class="credits">
-                <li>© Enciclopèdia desenvolupament front-end.</li>
-            </ul>
-            
+           
             <!-- Autor  -->
             <ul class="autor">
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines

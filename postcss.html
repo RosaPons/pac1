@@ -8,7 +8,7 @@
     <meta name="description" content="Conceptes front-end, defincio i referencies PostCSS web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
-
+    <link rel="icon"   href="img/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header>
         <!-- logo + menú idiomes-->
         <div class="container-header-1">
-            <div class="logo">
+            <div class="logo animation-rotate">
                 <img src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end ">
             </div>
 
@@ -38,7 +38,8 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html">Inici</a></li>
-                    <li><a href="empaquetadors.html">Module bundlers</a></li>
+                    <li><a href="empaquetadors.html">Empaquetadors</a></li>
+                    <li><a href="module.html">Module bundlers</a></li>
                     <li><a href="preprocessadors.html" class="active">Preprocessadors</a></li>
                 </ul>
             </nav>
@@ -64,8 +65,38 @@
             </div>
          </section>
                
-        <!--Tercera secció: 3 columnes de text -->
+        <!--Tercera secció: logo, foto esquema i 3 columnes de text -->
         <section class="det-section">
+            <div class= "det-foto-logo">
+                <img  src="img/postcss_medium.jpg"
+                      srcset= " 
+                        img/postcss_medium.jpg 430w,
+                        img/postcss_large.jpg 860w"
+                        sizes= "
+                        (min-width: 1440px) 20vw,
+                        (min-width: 830px) 30vw,
+                        (min-width: 480px) 70vw,
+                        90vw"
+                      alt = "Foto logo Babel" > 
+            </div>
+
+            <!-- foto  esquema  direcció d art -->
+            <div class= "det-foto-art">
+                <figure>
+                    <picture>
+                        <source srcset=" img/pcss_creador_860.jpg"
+                                media = "(min-width: 650px)">
+    
+                        <source srcset=" img/pcss_creador_430.jpg"
+                                media = "(min-width: 465px)">    
+    
+                        <img  src="img/pcss_creador_430.jpg" alt="Foto creador Postccs sobre taula un dies abans llançament producte">
+                      
+                    </picture>
+                    <figcaption class="figcaption-text"> Lviv, Ucrània. Pocs días abans del primer llançament de PostCSS</figcaption>
+                </figure>
+            </div>   
+
             <h3>POSTCSS</h3>
             <div class="det-contenidor">
                 <div class="det-col">
@@ -136,7 +167,52 @@
             </div>
         </section>
 
-        <!--4rta secció: video -->
+        <!-- Linia separació entre seccions  -->
+        <div class="det-section-separation">    </div>
+
+        <!--4rta secció: fotos  -->
+        <section class="det-section">
+
+            <!--: foto 1: llibre    -->
+            <div class= "det-foto">
+                <figure>
+                    <img  src="img/pcss_llibre_430.jpg"
+                      srcset= " 
+                        img/pcss_llibre_430.jpg 430w,
+                        img/pcss_llibre_500.jpg 500w"
+                        sizes= "
+                        (min-width: 1400px) 30vw,
+                        (min-width: 768px) 50vw,
+                        (min-width: 630px) 75vw,
+                        85vw"
+
+                      alt = "Foto llibre aprenentatge Postccs " > 
+                    <figcaption class="figcaption-text"> Llibre aprenentatge PostCcs</figcaption>
+                </figure>
+            </div>
+
+            <!--: foto : gràfica velocitat -->
+            <div class= "det-foto">
+                <figure>
+                    <img  src="img/pcss_speed_430.svg"
+                    srcset= " 
+                      img/pcss_speed_430.svg 430w,
+                      img/pcss_speed_860.svg 860w"
+                    sizes= "
+                      (min-width: 1400px) 50vw,
+                      (min-width: 768px) 75vw,
+                      90vw"
+                    alt = "Gràfica comparativa velocitat postcss amb altres preprocessadors" >  
+                    <figcaption class="figcaption-text"> Gràfica comparativa de velocitats</figcaption>                  
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- Linia separació entre seccions  -->
+        <div class="det-section-separation">    </div>
+
+        <!--5ena secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
                    <iframe  class = "det-video"  width="560" height="315" src="https://www.youtube.com/embed/deu8Y4rwsIM"
@@ -149,6 +225,12 @@
 
     <footer>
         <div class="container-footer">
+
+            <!-- Titol -->
+            <ul class="credits">
+                <li>© Enciclopèdia desenvolupament front-end. </li>
+            </ul>
+            
             <!-- logo -->
             <div class="logo-petit">
                 <img  src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end">
@@ -181,11 +263,7 @@
                 </nav>
             </div>
 
-            <!-- Crèdits -->
-            <ul class="credits">
-                <li>© Enciclopèdia desenvolupament front-end. </li>
-            </ul>
-            
+
             <!-- Autor  -->
             <ul class="autor">
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines

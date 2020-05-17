@@ -8,6 +8,7 @@
     <meta name="description" content="Conceptes front-end, defincio i referencies Babel web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
+    <link rel="icon"   href="img/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <header>
         <!-- logo + menú idiomes-->
         <div class="container-header-1">
-            <div class="logo">
+            <div class="logo animation-rotate">
                 <img src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end ">
             </div>
 
@@ -37,7 +38,8 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html">Inici</a></li>
-                    <li><a href="empaquetadors.html" >Module bundlers</a></li>
+                    <li><a href="empaquetadors.html" >Empequetadors</a></li>
+                    <li><a href="module.html" >Module bundlers</a></li>
                     <li><a href="preprocessadors.html" class="active">Preprocessadors</a></li>
                 </ul>
             </nav>
@@ -63,9 +65,35 @@
             </div>
          </section>
                
-        <!--Tercera secció: 2 columnes de text -->
+        <!--Tercera secció: logo, foto esquema, titol i 2 columnes de text -->
         <section class="det-section">
+            <!--: logo babel  -->
+            <div class= "det-foto-logo">
+                <img  src="img/babel_medium.jpg"
+                      srcset= " 
+                        img/babel_medium.jpg 430w,
+                        img/babel_large.jpg 860w"
+                        sizes= "
+                        (min-width: 1440px) 20vw,
+                        (min-width: 830px) 30vw,
+                        (min-width: 480px) 70vw,
+                        90vw"
+                      alt = "Foto logo Babel" > 
+            </div>
+
+            <!-- foto  esquema  direccio d art -->
+            <div class= "det-foto-art">
+                <picture>
+                    <source srcset=" img/babel_esquemaJS_860.jpg"
+                            media = "(min-width: 650px)">
+                    <source srcset=" img/babel_esquemaJS_430.jpg"
+                            media = "(min-width: 465px)">    
+                   <img  src="img/babel_esquemaJS_430.jpg" alt="Esquema conversió JS amb Babel">
+                </picture>
+            </div>
+
             <h3>BABEL</h3>
+
             <div class="det-contenidor">
                 <div class="det-col">
                     <h4> Que és </h4>
@@ -116,7 +144,69 @@
             </div>
         </section>
 
-        <!--4rta secció: video -->
+        <!-- Linia separació entre seccions  -->
+        <div class="det-section-separation">    </div>
+
+        <!--4rta secció: fotos  -->
+        <section class="det-section">
+
+            <!--: foto 1: esquema   -->
+            <div class= "det-foto">
+                <figure>
+                    <img  src="img/babel_esquema_430.jpg"
+                      srcset= " 
+                        img/babel_esquema_430.jpg 430w,
+                        img/babel_esquema_800.jpg 860w"
+                        sizes= "
+                        (min-width: 1400px) 50vw,
+                        (min-width: 768px) 75vw,
+                        90vw"
+
+                      alt = "Foto Esquema com funciona babel " > 
+                    <figcaption class="figcaption-text"> Esquema resultat utilitzant Babel</figcaption>
+                </figure>
+            </div>
+
+            <!--: foto : esquema  compiladors versos transpiladors  -->
+            <div class= "det-foto">
+                <figure>
+                    <img  src="img/babel_compilador_versus_transpilador_430.jpg"
+                              srcset= " 
+                                img/babel_compilador_versus_transpilador_430.jpg 430w,
+                                img/babel_compilador_versus_transpilador_800.jpg 860w"
+                                sizes= "
+                                (min-width: 1400px) 50vw,
+                                (min-width: 768px) 75vw,
+                                90vw"
+        
+                              alt = "Foto esquema compilació versus transpilació " > 
+                    <figcaption class="figcaption-text"> Compilació versus transpilació</figcaption>
+                </figure>   
+            </div>
+
+            <!--: foto : gràfica us babel -->
+            <div class= "det-foto">
+                <figure>
+                    <img  src="img/babel_graficUs_430.svg"
+                    srcset= " 
+                      img/babel_graficUs_430.svg 430w,
+                      img/babel_graficUs_860.svg 860w"
+                    sizes= "
+                      (min-width: 1400px) 50vw,
+                      (min-width: 768px) 75vw,
+                      90vw"
+                    alt = "Gràfica us Babel" >  
+                    <figcaption class="figcaption-text">Gràfica us Babel</figcaption>                  
+                </figure>
+
+            </div>
+
+        </section>
+
+        <!-- Linia separació entre seccions  -->
+        <div class="det-section-separation">    </div>
+
+        <!-- 5ena secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
                    <iframe class = "det-video"  width="560" height="315" src="https://www.youtube.com/embed/sZ0z7B7QmjI" 
@@ -129,6 +219,10 @@
 
     <footer>
         <div class="container-footer">
+            <!-- titol  -->
+            <ul class="credits">
+                <li>© Enciclopèdia desenvolupament front-end.</li>
+            </ul>
             <!-- logo -->
             <div class="logo-petit">
                 <img  src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end">
@@ -161,11 +255,6 @@
                 </nav>
             </div>
 
-            <!-- Crèdits -->
-            <ul class="credits">
-                <li>© Enciclopèdia desenvolupament front-end. </li>
-            </ul>
-            
             <!-- Autor  -->
             <ul class="autor">
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines

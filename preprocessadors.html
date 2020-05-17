@@ -8,7 +8,7 @@
     <meta name="description" content="Conceptes front-end, defincio i refenencies de module bundlers i preprocessadors de codi web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
-
+    <link rel="icon"   href="img/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header>
         <!-- logo + menú idiomes-->
         <div class="container-header-1">
-            <div class="logo">
+            <div class="logo animation-rotate">
                 <img src="img/logo_tecno.png" alt=" Logo del lloc: Enciclopedia conceptes front-end  ...">
             </div>
 
@@ -38,7 +38,8 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html">Inici</a></li>
-                    <li><a href="empaquetadors.html" >Module bundlers</a></li>
+                    <li><a href="empaquetadors.html" >Empaquetadors</a></li>
+                    <li><a href="module.html" >Module bundlers</a></li>
                     <li><a href="#" class="active">Preprocessadors</a></li>
                 </ul>
             </nav>
@@ -64,22 +65,35 @@
             </div>
         </section>
 
-        <!--Tercera secció:  fotografies i text   -->
+        <!--Tercera secció:  logos i text   -->
         <section class="cat-section">
             <h2> Preprocessadors </h2>
             <div class="cat-contenidor">
-                <div class="cat-foto">
-                    <figure>
-                        <a href="babel.html"><img class="opacitat" src="img/babel.png" alt="Logo software Babel"></a>
-                        <figcaption class="figcaption-text"><a href="" title="Babel"></a></figcaption>
-                    </figure>
+
+                <!-- Logos  -->
+                <div class= "cat-foto">
+
+                    <a href="babel.html">
+                        <img  class="opacitat"
+                              src="img/babel_medium.jpg"
+                              srcset= " 
+                                  img/babel_medium.jpg 430w,
+                                  img/babel_large.jpg 860w"
+                              alt = "Foto logo Babel" > 
+                    </a>
                 </div>
-                <div class="cat-foto">
-                    <figure>
-                        <a href="postcss.html"><img class="opacitat" src="img/postCSS.png" alt="Logo software PostCSS"></a>
-                        <figcaption class="figcaption-text"><a href="" title="PostCSS"></a></figcaption>
-                    </figure>
+
+                <div class= "cat-foto">
+                    <a href="postcss.html">
+                        <img  class="opacitat"
+                              src="img/postcss_medium.jpg"
+                              srcset= " 
+                                  img/postcss_medium.jpg 430,
+                                  img/postcss_large.jpg 860w"
+                        alt = "Foto logo PostCSS" > 
+                    </a>                    
                 </div>
+                
             </div>
 
             <div class="cat-text">

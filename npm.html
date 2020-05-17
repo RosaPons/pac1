@@ -8,7 +8,7 @@
     <meta name="description" content="Conceptes front-end, defincio i referencies Npm web " />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
-
+    <link rel="icon"   href="img/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header>
         <!-- logo + menú idiomes-->
         <div class="container-header-1">
-            <div class="logo">
+            <div class="logo animation-rotate">
                 <img src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end ">
             </div>
 
@@ -38,7 +38,8 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html">Inici</a></li>
-                    <li><a href="empaquetadors.html" class="active">Module bundlers</a></li>
+                    <li><a href="empaquetadors.html" class="active">Empaquetadors</a></li>
+                    <li><a href="module.html">Module bundlers</a></li>
                     <li><a href="preprocessadors.html">Preprocessadors</a></li>
                 </ul>
             </nav>
@@ -58,14 +59,44 @@
             <div class="fil-ariadna">
                 <ul>
                     <li><a href="index.html" title="Inici"> Inici &gt; </a></li>
-                    <li><a href="empaquetadors.html" title="Inici"> Module Bundlers &gt; </a></li>
+                    <li><a href="empaquetadors.html" title="Inici"> Empaquetadors &gt; </a></li>
                     <li> NPM</li>
                 </ul>
             </div>
          </section>
                
-        <!--Tercera secció: 3 columnes de text -->
+        <!--Tercera secció: log, foto creador Npm i  columnes de text -->
         <section class="det-section">
+            <div class= "det-foto-logo">
+                <img  src="img/npm_logo_medium.jpg"
+                      srcset= " 
+                        img/npm_logo_medium.jpg 430w,
+                        img/npm_logo_large.jpg 860w"
+                        sizes= "
+                        (min-width: 1440px) 20vw,
+                        (min-width: 830px) 30vw,
+                        (min-width: 480px) 70vw,
+                        90vw"
+                      alt = "Foto logo Babel" > 
+            </div>
+
+            <!-- foto  esquema  direcció d art -->
+            <div class= "det-foto-art">
+                <figure>
+                    <picture>
+                        <source srcset=" img/npm_ceo_860.jpg"
+                                media = "(min-width: 650px)">
+    
+                        <source srcset=" img/npm_ceo_430.jpg"
+                                media = "(min-width: 465px)">    
+    
+                        <img  src="img/npm_ceo_430.jpg" alt="Foto creador NPM">
+                      
+                    </picture>
+                    <figcaption class="figcaption-text"> Isaac Schlueter, Ceo de Npm</figcaption>
+                </figure>
+            </div> 
+
             <h3> NPM</h3>
             <div class="det-contenidor">
                 <div class="det-col">
@@ -130,7 +161,34 @@
             
         </section>
 
-        <!--4rta secció: video -->
+        <!-- Linia separació entre seccions  -->
+        <div class="det-section-separation">    </div>
+
+        <!--4rta secció: fotos  -->
+        <section class="det-section">
+
+            <!--: foto : gràfica descargas -->
+            <div class= "det-foto">
+                <figure>
+                    <img  src="img/npm_descargas_430.svg"
+                    srcset= " 
+                      img/npm_descargas_430.svg 430w,
+                      img/npm_descargas_860.svg 860w"
+                    sizes= "
+                      (min-width: 1400px) 50vw,
+                      (min-width: 768px) 75vw,
+                      90vw"
+                    alt = "Gràfica descarregues de NPM des de 2013 fins 2017" >  
+                    <figcaption class="figcaption-text"> Gràfica descàrregues de NPM</figcaption>                  
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- Linia separació entre seccions  -->
+        <div class="det-section-separation">    </div>
+        
+        <!--5ena secció: video -->
         <section class ="det-section">
            <div class="det-contenidor">
                 <iframe class = "det-video" width="560" height="315" src="https://www.youtube.com/embed/m3u4B7UouiY"
@@ -143,6 +201,12 @@
 
     <footer>
         <div class="container-footer">
+
+            <!-- Titol -->
+            <ul class="credits">
+                <li>© Enciclopèdia desenvolupament front-end. </li>
+            </ul>
+            
             <!-- logo -->
             <div class="logo-petit">
                 <img  src="img/logo_tecno.png" alt="Logo del lloc: Enciclopedia conceptes front-end">
@@ -175,11 +239,6 @@
                 </nav>
             </div>
 
-            <!-- Crèdits -->
-            <ul class="credits">
-                <li>© Enciclopèdia desenvolupament front-end. </li>
-            </ul>
-            
             <!-- Autor  -->
             <ul class="autor">
                 <li>Actividat realizada per Rosa Pons per a l'asignatura eines
