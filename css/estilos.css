@@ -398,6 +398,7 @@ section {
     background: url('../img/open_source2.png') no-repeat right center;  
     background-size: cover;
     padding-left: 3vw;
+    padding-bottom: 3vw;
 }
 
 /* capçaleres que apareixen en ind-presentacio-banner */
